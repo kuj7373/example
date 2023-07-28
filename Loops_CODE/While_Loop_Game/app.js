@@ -8,17 +8,22 @@ const target = Math.floor(Math.random() * start) + 1;
 console.log(target);
 
 let attempts = 1;
-let input = parseInt(prompt("Enter your first guess:"));
+let input = prompt("Enter your first guess: (Type 'q' to quit)");
 while (!(parseInt(input) === target)) {
     if (input === 'q')
         break;
+    input = parseInt(input);
     if (input > target) {
         input = prompt("Too High. Guess Again.");
+        attempts++;
+    }
+    else if (input < target) {
+        input = prompt("Too Low. Guess Again.");
+        attempts++;
     }
     else {
-        input = prompt("Too Low. Guess Again.");
+        input = prompt("Invalid guess. Please enter a number or 'q' to quit.");
     }
-    attempts++;
 }
 
 if (input === 'q')
