@@ -52,3 +52,14 @@ if (password.length >= 6) {
 else {
     console.log("Password too short! Must be 6+ characters");
 }
+
+
+// const a = prompt("Enter a letter");
+
+// switch (a) {
+//     case 'me':
+//         console.log("Print");
+//         break;
+//     case 'what':
+//         console.log("what");
+// }
